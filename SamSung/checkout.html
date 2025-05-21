@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh Toán</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Samsung</div>
+        <nav>
+            <ul>
+                <li><a href="#">Điện thoại</a></li>
+                <li><a href="#">TV & AV</a></li>
+                <li><a href="#">Gia Dụng</a></li>
+                <li><a href="#">Phụ kiện</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="checkout">
+        <h2>Thông tin thanh toán</h2>
+        <form>
+            <label for="shipping-address">Địa chỉ giao hàng:</label>
+            <input type="text" id="shipping-address" name="shipping-address" required>
+
+            <label for="billing-address">Địa chỉ thanh toán:</label>
+            <input type="text" id="billing-address" name="billing-address" required>
+
+            <label for="payment-method">Phương thức thanh toán:</label>
+            <select id="payment-method" name="payment-method">
+                <option value="credit-card">Thẻ tín dụng</option>
+                <option value="paypal">PayPal</option>
+            </select>
+
+            <button type="submit" class="btn-submit">Thanh toán</button>
+        </form>
+    </section>
+
+    <footer>
+        <ul>
+            <li><a href="#">Chính sách bảo mật</a></li>
+            <li><a href="#">Điều khoản sử dụng</a></li>
+            <li><a href="#">Liên hệ</a></li>
+        </ul>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
