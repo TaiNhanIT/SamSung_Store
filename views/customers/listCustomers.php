@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Danh sách khách hàng đã đăng nhập</title>
-    <link rel="stylesheet" href="/Commercer/css/customers.css">
+    <link rel="stylesheet" href="/SamSung/css/customers.css">
 </head>
 <body>
 <div class="customer-container">
@@ -61,7 +61,7 @@
     </table>
 </div>
 
-<!-- PHÂN TRANG ĐƯA RA NGOÀI DIV -->
+<!-- Đưa phân trang xuống dưới cùng trang -->
 <?php if (isset($totalPages) && $totalPages > 1): ?>
     <div class="pagination">
         <?php if ($page > 1): ?>

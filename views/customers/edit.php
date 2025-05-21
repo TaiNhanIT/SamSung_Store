@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Sửa khách hàng</title>
-    <link rel="stylesheet" href="/Commercer/css/edit.css">
+    <link rel="stylesheet" href="/SamSung/css/edit.css">
 </head>
 <body>
 <div class="edit-container">

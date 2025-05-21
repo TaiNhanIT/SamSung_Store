@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Đăng nhập</title>
-    <link rel="stylesheet" href="/Commercer/css/loginandregister.css">
+    <link rel="stylesheet" href="/SamSung/css/loginandregister.css">
 </head>
 <body>
 <div class="register-container">
@@ -20,7 +20,7 @@
         <input type="password" name="password" placeholder="Mật khẩu" required>
         <button type="submit">Đăng nhập</button>
     </form>
-    <a class="switch-link" href="/Commercer/?controller=auth&action=register">Chưa có tài khoản? Đăng ký tại đây</a>
+    <a class="switch-link" href="/SamSung/?controller=auth&action=register">Chưa có tài khoản? Đăng ký tại đây</a>
 </div>
 <!-- Xóa dòng đăng xuất ở trang đăng nhập, không cần thiết -->
 </body>

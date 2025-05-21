@@ -1,12 +1,17 @@
 /* Cấu trúc trang quản lý khách hàng */
 
 body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     background: linear-gradient(135deg, #000 0%, #FFD700 100%);
     font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
+
 .customer-container {
+    flex: 1 0 auto;
     max-width: 1200px;
     margin: 40px auto;
     background: rgba(255,255,255,0.05);
@@ -14,6 +19,7 @@ body {
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     padding: 32px;
 }
+
 h1 {
     color: #FFD700;
     text-align: center;
@@ -136,45 +142,45 @@ h1 {
         .action-btn:hover, .address-btn:hover, .delete-btn:hover {
             background: #ffb300;
         }
-        .pagination {
-            text-align: center;
-            margin: 24px 0;
-        }
-        .pagination a, .pagination span {
-            color: #fff;
-            background: #333;
-            padding: 4px 12px;
-            border-radius: 4px;
-            margin: 0 3px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background 0.2s;
-        }
-        .pagination a:hover {
-            background: #ffd600;
-            color: #222;
-        }
-        .pagination .current {
-            background: #ffd600;
-            color: #222;
-        }
-/* Thêm CSS cho phân trang ở dưới cùng và căn giữa */
-        .pagination {
-            display: flex;
-            justify-content: center;
-            margin: 32px 0 0 0;
-        }
-        .pagination a, .pagination span.current {
-            margin: 0 4px;
-            padding: 8px 16px;
-            background: #222;
-            color: #ffd600;
-            border-radius: 4px;
-            text-decoration: none;
-        }
-        .pagination span.current {
-            background: #ffd600;
-            color: #222;
-            font-weight: bold;
-        }
-        
+
+        /*Phần chuyểnchuyển trang*/
+   .pagination {
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 40px;
+    width: 100vw;
+    box-sizing: border-box;
+    background: transparent;
+    /* Loại bỏ margin-top/margin-bottom nếu có */
+    margin: 0;
+    position: relative;
+    z-index: 2;
+}
+
+/* Style cho các nút phân trang */
+.pagination a, .pagination span.current {
+    display: inline-block;
+    min-width: 36px;
+    padding: 8px 16px;
+    margin: 0 4px;
+    background: #ffd600;
+    color: #222;
+    font-weight: bold;
+    border-radius: 6px;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.pagination a:hover {
+    background: #ffb300;
+    color: #fff;
+}
+
+.pagination span.current {
+    background: #ffd600;
+    color: #fff;
+    pointer-events: none;
+}

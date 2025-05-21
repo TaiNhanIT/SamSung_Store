@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Đăng ký tài khoản</title>
-    <link rel="stylesheet" href="/Commercer/css/loginandregister.css">
+    <link rel="stylesheet" href="/SamSung/css/loginandregister.css">
 </head>
 <body>
 <div class="register-container">

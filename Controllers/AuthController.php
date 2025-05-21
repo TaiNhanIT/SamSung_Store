@@ -39,7 +39,7 @@ class AuthController {
                 $_SESSION['customer_id'] = $customer['id'];
                 $_SESSION['customer_email'] = $customer['email'];
                 $_SESSION['last_login_password'] = $password; // Lưu lại mật khẩu lần đăng nhập gần nhất
-                header('Location: /Commercer/');
+                header('Location: /SamSung/');
                 exit;
             } else {
                 $login_error = 'Email hoặc mật khẩu không đúng!';
@@ -81,7 +81,7 @@ class AuthController {
                         // Lưu lại email và mật khẩu vừa đăng ký để tự động điền vào form đăng nhập
                         $_SESSION['login_email'] = $email;
                         $_SESSION['login_password'] = $password;
-                        header('Location: /Commercer/?controller=auth&action=login');
+                        header('Location: /SamSung/?controller=auth&action=login');
                         exit;
                     } else {
                         $register_error = "Đăng ký thất bại!";
@@ -95,7 +95,7 @@ class AuthController {
     session_start();
     session_unset();
     session_destroy();
-    header('Location: /Commercer/?controller=auth&action=login');
+    header('Location: /SamSung/?controller=auth&action=login');
     exit();
 }
 }
