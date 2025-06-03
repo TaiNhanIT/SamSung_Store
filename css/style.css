@@ -8,13 +8,15 @@
 /* Toàn bộ trang với nền đen */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #111;  /* Đặt nền đen cho toàn bộ trang */
+    background-color: #111;
+    /* Đặt nền đen cho toàn bộ trang */
     color: white;
 }
 
 /* Cấu trúc header */
 header {
-    background-color: #111;  /* Màu nền đen cho header */
+    background-color: #111;
+    /* Màu nền đen cho header */
     color: white;
     padding: 20px 50px;
     display: flex;
@@ -26,7 +28,8 @@ header {
 header .logo {
     font-size: 30px;
     font-weight: bold;
-    color: #FFBF00;  /* Màu vàng sang trọng cho logo */
+    color: #FFBF00;
+    /* Màu vàng sang trọng cho logo */
 }
 
 header nav ul {
@@ -48,12 +51,14 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: #FFBF00;  /* Màu vàng cho liên kết khi hover */
+    color: #FFBF00;
+    /* Màu vàng cho liên kết khi hover */
 }
 
 /* Cấu trúc banner */
 .banner {
-    background-color: #111;  /* Đặt màu nền đen */
+    background-color: #111;
+    /* Đặt màu nền đen */
     color: white;
     text-align: center;
     padding: 80px 50px;
@@ -63,7 +68,8 @@ header nav ul li a:hover {
 .banner h1 {
     font-size: 60px;
     margin-bottom: 20px;
-    color: #FFBF00;  /* Màu vàng nổi bật cho tiêu đề */
+    color: #FFBF00;
+    /* Màu vàng nổi bật cho tiêu đề */
 }
 
 .banner p {
@@ -83,7 +89,8 @@ header nav ul li a:hover {
 }
 
 .banner .btn-buy:hover {
-    background-color: #FFA500;  /* Hiệu ứng màu khi hover */
+    background-color: #FFA500;
+    /* Hiệu ứng màu khi hover */
 }
 
 /* Cấu trúc sản phẩm */
@@ -95,7 +102,8 @@ header nav ul li a:hover {
 
 .product-slider h2 {
     font-size: 32px;
-    color: #FFBF00;  /* Màu vàng cho tiêu đề sản phẩm */
+    color: #FFBF00;
+    /* Màu vàng cho tiêu đề sản phẩm */
     margin-bottom: 30px;
 }
 
@@ -126,7 +134,8 @@ header nav ul li a:hover {
 
 .product-slider .product p {
     font-size: 18px;
-    color: #FFBF00;  /* Màu vàng cho tên sản phẩm */
+    color: #FFBF00;
+    /* Màu vàng cho tên sản phẩm */
 }
 
 .product-slider .btn-view {
@@ -169,7 +178,8 @@ footer ul li a {
 }
 
 footer ul li a:hover {
-    color: #FFBF00;  /* Màu vàng khi hover trong footer */
+    color: #FFBF00;
+    /* Màu vàng khi hover trong footer */
 }
 
 /* Cấu hình toàn trang */
@@ -181,13 +191,14 @@ footer ul li a:hover {
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #111;  /* Nền màu đen */
+    background-color: #111;
+    /* Nền màu đen */
     color: white;
 }
 
 /* Header */
 header {
-    background-color: #111;  
+    background-color: #111;
     color: white;
     padding: 20px 50px;
     display: flex;
@@ -199,7 +210,8 @@ header {
 header .logo {
     font-size: 30px;
     font-weight: bold;
-    color: #FFBF00;  /* Màu vàng cho logo */
+    color: #FFBF00;
+    /* Màu vàng cho logo */
 }
 
 header nav ul {
@@ -227,7 +239,8 @@ header nav ul li a:hover {
 /* Category Banner */
 .category-banner {
     background-color: #222;
-    color: #FFBF00;  /* Màu vàng cho tiêu đề */
+    color: #FFBF00;
+    /* Màu vàng cho tiêu đề */
     text-align: center;
     padding: 50px 0;
 }
@@ -273,7 +286,8 @@ header nav ul li a:hover {
 
 .product-card h3 {
     font-size: 20px;
-    color: #FFBF00;  /* Màu vàng cho tên sản phẩm */
+    color: #FFBF00;
+    /* Màu vàng cho tên sản phẩm */
     margin-bottom: 15px;
 }
 
@@ -332,7 +346,8 @@ header {
 header .logo {
     font-size: 30px;
     font-weight: bold;
-    color: #FFBF00;  /* Màu vàng cho logo */
+    color: #FFBF00;
+    /* Màu vàng cho logo */
     text-decoration: none;
 }
 
@@ -368,10 +383,11 @@ footer p {
     margin-top: 20px;
     color: #888;
 }
+
 .auth-btn-nav {
     padding: 8px 20px;
     border-radius: 8px;
-    background: linear-gradient(90deg,#e385ec 0%,#004aad 100%);
+    background: linear-gradient(90deg, #e385ec 0%, #004aad 100%);
     color: #fff !important;
     font-weight: bold;
     text-decoration: none;
@@ -379,8 +395,48 @@ footer p {
     margin-left: 10px;
     display: inline-block;
 }
+
 .auth-btn-nav:hover {
-    background: linear-gradient(90deg,#004aad 0%,#e385ec 100%);
+    background: linear-gradient(90deg, #004aad 0%, #e385ec 100%);
     transform: translateY(-2px) scale(1.03);
     color: #fff !important;
+}
+
+/* SamSung/css/style.css */
+.owl-carousel .item {
+    text-align: center;
+    padding: 10px;
+}
+.owl-carousel .item img {
+    max-width: 100%;
+    height: auto;
+}
+.no-image-placeholder {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+}
+.no-image-placeholder span {
+    font-size: 24px;
+}
+.no-image-placeholder p {
+    margin: 5px 0 0;
+    font-size: 12px;
+    color: #666;
+}
+.product-title, .product-price {
+    margin: 5px 0;
+}
+.btn-view {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
 }
