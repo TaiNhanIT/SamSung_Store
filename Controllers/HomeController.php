@@ -9,8 +9,8 @@ class HomeController
 
     public function __construct()
     {
-        // Khởi tạo các model với kết nối cơ sở dữ liệu
-        $db = new Database(); // Giả sử Database.php đã được import trong Category.php hoặc Product.php
+        
+        $db = new Database(); 
         $this->categoryModel = new Category($db);
         $this->productModel = new Product($db);
     }
@@ -33,7 +33,6 @@ class HomeController
             // Truyền dữ liệu vào view
             require 'views/home/home.php';
         } catch (Exception $e) {
-            // Xử lý lỗi (có thể ghi log hoặc hiển thị thông báo)
             die('Lỗi khi tải trang chủ: ' . $e->getMessage());
         }
     }

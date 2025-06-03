@@ -1,12 +1,7 @@
 <?php
 require_once __DIR__ . '/../models/Customer.php';
-// import file Customer.php từ thư mục models để sử dụng class Customer.
 
 class CustomerController {
-    /**
-     * Hàm này lấy danh sách tất cả khách hàng từ model Customer,
-     * sau đó truyền dữ liệu sang view để hiển thị.
-     */
 public function index() {
     $customerModel = new Customer();
     $perPage = 6;
@@ -20,17 +15,9 @@ public function index() {
 
     require __DIR__ . '/../views/customers/listCustomers.php';
 }
-
-    /**
-     * Hàm này lấy thông tin chi tiết của một khách hàng theo id,
-     * sau đó truyền dữ liệu sang view để hiển thị.
-     * @param int $id ID của khách hàng cần xem chi tiết.
-     */
     public function detail($id) {
         $customerModel = new Customer(); // Tạo đối tượng model Customer
         $customer = $customerModel->getCustomerById($id); // Lấy thông tin khách hàng theo id
-
-        // Truyền dữ liệu sang view để hiển thị
         require_once __DIR__ . '/../views/customers/detail.php';
     }
 public function edit($id) {

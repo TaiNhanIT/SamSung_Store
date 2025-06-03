@@ -7,8 +7,6 @@ class AuthController {
         session_start();
         $login_error = '';
         $register_success = '';
-
-        // Nếu đã đăng nhập, lấy email và mật khẩu cuối cùng từ session (nếu có)
         if (isset($_SESSION['customer_id']) && isset($_SESSION['customer_email'])) {
             $email = $_SESSION['customer_email'];
             $password = $_SESSION['last_login_password'] ?? '';
