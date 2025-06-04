@@ -9,7 +9,10 @@
 <body>
     <div class="container">
         <h1>Quản lý sản phẩm</h1>
-        <a href="?controller=home&action=index" class="btn-back">← Quay lại trang chủ</a>
+        <div class="header-actions">
+            <a href="?controller=home&action=index" class="btn-back">← Quay lại trang chủ</a>
+            <a href="?controller=product&action=add" class="btn-add-product">+ Thêm sản phẩm</a>
+        </div>
         <table class="product-table">
             <thead>
                 <tr>

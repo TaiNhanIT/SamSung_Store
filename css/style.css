@@ -440,3 +440,38 @@ footer p {
     text-decoration: none;
     border-radius: 5px;
 }
+/* Chuẩn hóa kích thước ảnh trong slider Owl Carousel */
+.owl-carousel .item img {
+    max-width: 200px; /* Chiều rộng tối đa */
+    height: auto; /* Giữ tỷ lệ gốc */
+    display: block; /* Loại bỏ khoảng cách không mong muốn */
+    margin: 0 auto; /* Căn giữa ảnh */
+}
+
+.no-image-placeholder {
+    width: 200px; /* Chiều rộng đồng nhất với ảnh */
+    height: 200px; /* Chiều cao cố định */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+}
+
+.no-image-placeholder span {
+    font-size: 24px;
+}
+
+.no-image-placeholder p {
+    margin: 5px 0 0;
+    font-size: 12px;
+    color: #666;
+}
+
+/* Đảm bảo container item đủ không gian */
+.owl-carousel .item {
+    text-align: center;
+    padding: 10px;
+    min-height: 250px; /* Đảm bảo chiều cao tối thiểu để chứa ảnh và thông tin */
+}

@@ -23,9 +23,6 @@ if (session_status() === PHP_SESSION_NONE) session_start();
                 <li><a href="category.html">TV & AV</a></li>
                 <li><a href="category.html">Gia Dụng</a></li>
                 <li><a href="category.html">Phụ kiện</a></li>
-                <li style="margin-left:20px;">
-                    <a href="?controller=product&action=add" style="display:inline-block;padding:8px 24px;border-radius:8px;background:linear-gradient(90deg,#28a745 0%,#20c997 100%);color:#fff;font-weight:bold;text-decoration:none;text-align:center;width:150px;">+ Thêm sản phẩm</a>
-                </li>
                 <li style="margin-left:10px;">
                     <a href="?controller=auth&action=login" style="display:inline-block;padding:8px 24px;border-radius:8px;background:linear-gradient(90deg,#d16ba5 0%,#5ffbf1 100%);color:#fff;font-weight:bold;text-decoration:none;text-align:center;width:150px;">Đăng nhập / Đăng ký</a>
                 </li>
@@ -45,81 +42,81 @@ if (session_status() === PHP_SESSION_NONE) session_start();
     </section>
 
     <!-- Product Slider (Tất cả sản phẩm) -->
-    <section class="product-slider">
-        <h2>Tất cả sản phẩm</h2>
-        <div class="owl-carousel owl-theme all-products-slider">
-            <?php
-            $allProducts = [];
-            foreach ($productsByCategory as $products) {
-                $allProducts = array_merge($allProducts, $products);
-            }
-            if (!empty($allProducts)) {
-                foreach ($allProducts as $product) {
-                    ?>
-                    <div class="item">
-                        <?php if (!empty($product['image']) && file_exists('images/' . $product['image'])): ?>
-                            <img src="images/<?= htmlspecialchars($product['image']) ?>" alt="<?= htmlspecialchars($product['product_name']) ?>">
-                        <?php else: ?>
-                            <div class="no-image-placeholder">
-                                <span>📷</span>
-                                <p>Không có ảnh</p>
-                            </div>
-                        <?php endif; ?>
-                        <div class="product-title"><?= htmlspecialchars($product['product_name']) ?></div>
-                        <div class="product-price"><?= number_format($product['price'], 0, ',', '.') ?> VNĐ</div>
-                        <a href="product.html?id=<?= $product['id'] ?>" class="btn-view">Xem chi tiết</a>
-                    </div>
-                    <?php
-                }
-            } else {
+<section class="product-slider">
+    <h2>Tất cả sản phẩm</h2>
+    <div class="owl-carousel owl-theme all-products-slider">
+        <?php
+        $allProducts = [];
+        foreach ($productsByCategory as $products) {
+            $allProducts = array_merge($allProducts, $products);
+        }
+        if (!empty($allProducts)) {
+            foreach ($allProducts as $product) {
                 ?>
                 <div class="item">
-                    <p>Chưa có sản phẩm nào.</p>
+                    <?php if (!empty($product['image']) && file_exists('images/' . $product['image'])): ?>
+                        <img src="/SamSung/images/<?= htmlspecialchars($product['image']) ?>" alt="<?= htmlspecialchars($product['product_name']) ?>" class="product-image">
+                    <?php else: ?>
+                        <div class="no-image-placeholder">
+                            <span>📷</span>
+                            <p>Không có ảnh</p>
+                        </div>
+                    <?php endif; ?>
+                    <div class="product-title"><?= htmlspecialchars($product['product_name']) ?></div>
+                    <div class="product-price"><?= number_format($product['price'], 0, ',', '.') ?> VNĐ</div>
+                    <a href="product.html?id=<?= $product['id'] ?>" class="btn-view">Xem chi tiết</a>
                 </div>
                 <?php
             }
+        } else {
             ?>
-        </div>
-    </section>
+            <div class="item">
+                <p>Chưa có sản phẩm nào.</p>
+            </div>
+            <?php
+        }
+        ?>
+    </div>
+</section>
 
-    <!-- Product Sliders by Category -->
-    <?php if (!empty($categories)): ?>
-        <?php foreach ($categories as $cat): ?>
-            <section class="product-slider">
-                <h2><?= htmlspecialchars($cat['name']) ?></h2>
-                <div class="owl-carousel owl-theme category-slider-<?= $cat['id'] ?>">
-                    <?php 
-                        $products = $productsByCategory[$cat['id']] ?? [];
-                        if (!empty($products)):
-                    ?>
-                        <?php foreach ($products as $product): ?>
-                            <div class="item">
-                                <?php if (!empty($product['image']) && file_exists('images/' . $product['image'])): ?>
-                                    <img src="images/<?= htmlspecialchars($product['image']) ?>" alt="<?= htmlspecialchars($product['product_name']) ?>">
-                                <?php else: ?>
-                                    <div class="no-image-placeholder">
-                                        <span>📷</span>
-                                        <p>Không có ảnh</p>
-                                    </div>
-                                <?php endif; ?>
-                                <div class="product-title"><?= htmlspecialchars($product['product_name']) ?></div>
-                                <div class="product-price"><?= number_format($product['price'], 0, ',', '.') ?> VNĐ</div>
-                                <a href="product.html?id=<?= $product['id'] ?>" class="btn-view">Xem chi tiết</a>
-                            </div>
-                        <?php endforeach; ?>
-                    <?php else: ?>
-                        <div class="item">
-                            <p>Chưa có sản phẩm nào trong danh mục này.</p>
-                        </div>
-                    <?php endif; ?>
-                </div>
-            </section>
-        <?php endforeach; ?>
-    <?php else: ?>
+<!-- Product Sliders by Category -->
+<?php if (!empty($categories)): ?>
+    <?php foreach ($categories as $cat): ?>
         <section class="product-slider">
-            <h2>Chưa có danh mục nào</h2>
+            <h2><?= htmlspecialchars($cat['name']) ?></h2>
+            <div class="owl-carousel owl-theme category-slider-<?= $cat['id'] ?>">
+                <?php 
+                    $products = $productsByCategory[$cat['id']] ?? [];
+                    if (!empty($products)):
+                ?>
+                    <?php foreach ($products as $product): ?>
+                        <div class="item">
+                            <?php if (!empty($product['image']) && file_exists('images/' . $product['image'])): ?>
+                                <img src="/SamSung/images/<?= htmlspecialchars($product['image']) ?>" alt="<?= htmlspecialchars($product['product_name']) ?>" class="product-image">
+                            <?php else: ?>
+                                <div class="no-image-placeholder">
+                                    <span>📷</span>
+                                    <p>Không có ảnh</p>
+                                </div>
+                            <?php endif; ?>
+                            <div class="product-title"><?= htmlspecialchars($product['product_name']) ?></div>
+                            <div class="product-price"><?= number_format($product['price'], 0, ',', '.') ?> VNĐ</div>
+                            <a href="product.html?id=<?= $product['id'] ?>" class="btn-view">Xem chi tiết</a>
+                        </div>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <div class="item">
+                        <p>Chưa có sản phẩm nào trong danh mục này.</p>
+                    </div>
+                <?php endif; ?>
+            </div>
         </section>
-    <?php endif; ?>
+    <?php endforeach; ?>
+<?php else: ?>
+    <section class="product-slider">
+        <h2>Chưa có danh mục nào</h2>
+    </section>
+<?php endif; ?>
 
     <!-- Footer -->
 <footer>
